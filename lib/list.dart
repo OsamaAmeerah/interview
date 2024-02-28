@@ -25,7 +25,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
    Future<void> fetchTodos() async {
 
        final response = await Dio().get('https://dummyjson.com/todos');
-       print(response.data); // Add this line to print the response data
        if (response.statusCode == 200) {
          setState(() {
            todos = List<ListModel>.from(response.data['todos'].map((x) => ListModel.fromJson(x)));

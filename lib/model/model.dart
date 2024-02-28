@@ -4,8 +4,7 @@ class ListModel {
   bool complete;
   int userId;
 
-  ListModel(
-      {required this.id,
+  ListModel({required this.id,
       required this.todo,
       required this.complete,
       required this.userId});
